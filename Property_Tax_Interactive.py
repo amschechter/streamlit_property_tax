@@ -8,7 +8,7 @@ import streamlit as st
 import pandas as pd
 import pydeck
 #import folium
-from streamlit_folium import st_folium
+#from streamlit_folium import st_folium
 
 my_blog_post_url = "https://amschechter.github.io/jekyll/update/2026/02/16/Land_Value_Tax.html"
 
@@ -23,7 +23,6 @@ def main():
     st.write("This webpage is made as an addendum to my [blog post here](%s)" % my_blog_post_url, ", and to show differences between the two aspects of property tax calculation: Improved value and Land Value.")
     st.write(APP_INTRO_TEXT)
     
-    #comment
     ## LOAD DATA
     #data_frame = pd.read_csv("C:/Users/aaron/Fun Mapping Work/Steamlit_plus_Folium/Data/Parcels_for_King_County_with_Address_with_Property_Information___parcel_address_area_Seattle_Only.csv")
     data_frame = pd.read_csv("C:/Users/aaron/Fun Mapping Work/Steamlit_plus_Folium/Data/Parcels_for_King_County_with_Address_with_Property_Information_Trimmed_Columns_SEA_ONLY.csv")
