@@ -7,8 +7,6 @@
 import streamlit as st
 import pandas as pd
 import pydeck
-#import folium
-#from streamlit_folium import st_folium
 
 my_blog_post_url = "https://amschechter.github.io/jekyll/update/2026/02/16/Land_Value_Tax.html"
 
@@ -25,7 +23,8 @@ def main():
     
     ## LOAD DATA
     #data_frame = pd.read_csv("C:/Users/aaron/Fun Mapping Work/Steamlit_plus_Folium/Data/Parcels_for_King_County_with_Address_with_Property_Information___parcel_address_area_Seattle_Only.csv")
-    data_frame = pd.read_csv("C:/Users/aaron/Fun Mapping Work/Steamlit_plus_Folium/Data/Parcels_for_King_County_with_Address_with_Property_Information_Trimmed_Columns_SEA_ONLY.csv")
+    #data_frame = pd.read_csv("C:/Users/aaron/Fun Mapping Work/Steamlit_plus_Folium/Data/Parcels_for_King_County_with_Address_with_Property_Information_Trimmed_Columns_SEA_ONLY.csv")
+    data_frame = pd.read_csv("Data/Parcels_for_King_County_with_Address_with_Property_Information_Trimmed_Columns_SEA_ONLY.csv")
 
     data_frame['PREUSE_DESC'] = data_frame['PREUSE_DESC'].str.rstrip() ##takes the whitespace off the end of the column
     data_frame['COMBINED_APPR_VAL'] = data_frame['APPRLNDVAL'] + data_frame['APPR_IMPR'] ## add combined tax column
