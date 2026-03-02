@@ -40,7 +40,7 @@ def main():
 
         parcel_type = st.selectbox('Parcel Type', parcel_type_list)   
         value_type = st.selectbox('Assessed Value Type', value_type_list)
-        hexagon_size = st.slider(label='Size of Hexagon (Radius in Meters)', min_value=150, max_value=700, value=300)   
+        hexagon_size = st.slider(label='Size of Hexagons (Radius in Meters)', min_value=150, max_value=700, value=300)   
 
         submit_button = st.form_submit_button(label='recalculate map')
     
@@ -111,7 +111,7 @@ def display_map(df, Value_Type, hex_size):
             zoom=10.5,
             pitch=35),
             tooltip={
-                "html": "<b>Summed Value:</b> ${colorValue}",
+                "html": "<b>Summed {Value_Type} in this Hexagon:</b> ${colorValue}",
                 "style": {"color": "white"}
             },
             layers=[
