@@ -111,7 +111,7 @@ def display_map(df, Value_Type, hex_size):
             zoom=10.5,
             pitch=35),
             tooltip={
-                "html": "<b>Summed {Value_Type} in this Hexagon:</b> ${colorValue}",
+                "html": "<b>Summed value in this Hexagon:</b> ${colorValue}",
                 "style": {"color": "white"}
             },
             layers=[
